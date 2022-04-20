@@ -24,6 +24,13 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   var isTurnO = true;
   List<String> xOrOList = ['', '', '', '', '', '', '', '', ''];
+  bool? gameOver;
+
+  // void _showListNotEmpty() {
+  //   xOrOList.map((item) {
+  //     print(item);
+  //   });
+  // }
 
   Widget _getScorrBoard() {
     return Row(
@@ -114,11 +121,12 @@ class _HomePageState extends State<HomePage> {
   }
 
   void onTapped(int index) {
-    debugPrint(xOrOList.toString());
     setState(() {
+      // _showListNotEmpty();
       if (xOrOList[index] == 'X' || xOrOList[index] == 'O') {
         return;
       }
+
       if (isTurnO) {
         xOrOList[index] = 'O';
       } else {
@@ -141,6 +149,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    // _showDialog(context);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.grey.shade900,
