@@ -24,7 +24,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   var isTurnO = true;
   List<String> xOrOList = ['', '', '', '', '', '', '', '', ''];
-  
+
   Widget _getScorrBoard() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -101,7 +101,7 @@ class _HomePageState extends State<HomePage> {
                   xOrOList[index],
                   style: TextStyle(
                     color: xOrOList[index] == 'O' ? Colors.red : Colors.blue,
-                    fontSize: 50,
+                    fontSize: 51,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
